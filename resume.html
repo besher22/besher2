@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <title>besher coding | السيرة الذاتية</title>
+
+    <!-- Meta Data -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="author" content="ArtTemplate" />
+    <meta name="description" content="vCard" />
+
+    <!-- Twitter data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ArtTemplates">
+    <meta name="twitter:title" content="vCard">
+    <meta name="twitter:description" content="vCard">
+    <meta name="twitter:image" content="assets/images/social.jpg">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="ArtTemplate" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="your url website" />
+    <meta property="og:image" content="me.jpeg" />
+    <meta property="og:description" content="vCard" />
+    <meta property="og:site_name" content="vCard" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="144x144" href="me.jpeg">
+    <link rel="apple-touch-icon" sizes="114x114" href="me.jpeg">
+    <link rel="apple-touch-icon" sizes="72x72" href="me.jpeg">
+    <link rel="apple-touch-icon" sizes="57x57" href="">
+    <link rel="shortcut icon" href="me.jpeg" type="image/jpeg">
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styl.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+    <style>
+        .resume-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: #fff;
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.03em;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(79, 70, 229, 0.35);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .resume-download-btn:hover {
+            background: linear-gradient(135deg, #818cf8, #6366f1);
+            box-shadow: 0 12px 30px rgba(99, 102, 241, 0.45);
+            transform: translateY(-2px);
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .resume-grid {
+            display: grid;
+            gap: 1.25rem;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .resume-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: var(--radius-18);
+            padding: 1.5rem;
+            transition: border-color 0.2s ease;
+        }
+        .resume-card:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .resume-card__heading {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin: 0 0 1.1rem 0;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #818cf8;
+            font-family: var(--font-family);
+        }
+
+        .resume-card p {
+            line-height: 1.7;
+            color: var(--color-paragraph);
+            margin: 0;
+            font-size: 0.92rem;
+        }
+
+        .resume-job-title {
+            font-weight: 600;
+            color: var(--color-heading);
+            font-size: 0.95rem;
+            margin: 0 0 0.2rem 0;
+            font-family: var(--font-family);
+        }
+        .resume-job-company {
+            font-size: 0.82rem;
+            color: #6ee7b7;
+            margin: 0 0 0.6rem 0;
+        }
+        .resume-job-period {
+            display: inline-block;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 50px;
+            padding: 0.2rem 0.75rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .resume-bullets {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .resume-bullets li {
+            display: flex;
+            gap: 0.6rem;
+            align-items: flex-start;
+            font-size: 0.88rem;
+            color: var(--color-paragraph);
+            line-height: 1.65;
+            margin-bottom: 0.5rem;
+        }
+        .resume-bullets li::before {
+            content: "";
+            display: block;
+            width: 6px;
+            height: 6px;
+            min-width: 6px;
+            border-radius: 50%;
+            background: #6366f1;
+            margin-top: 0.45rem;
+        }
+
+        .resume-skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+        }
+        @media (max-width: 580px) {
+            .resume-skills-grid { grid-template-columns: 1fr; }
+        }
+
+        .resume-skills-category {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            margin: 0 0 0.6rem 0;
+        }
+
+        .resume-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+        .resume-tag {
+            font-size: 0.78rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: 8px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            color: #a5b4fc;
+            font-family: var(--font-family);
+        }
+
+        .resume-cert-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.85rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .resume-cert-item:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .resume-cert-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            min-width: 36px;
+            border-radius: 10px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            color: #818cf8;
+            font-size: 0.85rem;
+        }
+        .resume-cert-name {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--color-heading);
+            margin: 0 0 0.15rem 0;
+            line-height: 1.4;
+        }
+        .resume-cert-issuer {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.38);
+            margin: 0;
+        }
+
+        .resume-edu-degree {
+            font-weight: 600;
+            color: var(--color-heading);
+            font-size: 0.95rem;
+            margin: 0 0 0.25rem 0;
+        }
+        .resume-edu-institution {
+            font-size: 0.84rem;
+            color: #818cf8;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .nav__item a.active {
+            color: var(--color-accent);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main">
+        <div class="container gutter-top gutter-bottom">
+            <div class="row sticky-parent">
+
+                <!-- Sidebar -->
+                <aside class="col-12 col-md-12 col-xl-3">
+                    <div class="sidebar box-outer sticky-column">
+                        <div class="sidebar__base-info">
+                            <figure class="avatar-box">
+                                <img src="me.jpeg" alt="بشر الحاج عمر">
+                            </figure>
+                            <div class="text-xl-center">
+                                <h3 class="title title--h3 sidebar__name">بشر الحاج عمر</h3>
+                                <div class="badge">مبرمج و صانع محتوي</div>
+                            </div>
+                            <button class="btn btn--small btn--icon-right sidebar__btn js-btn-toggle">
+                                <span>عرض الروابط</span><i class="feathericon-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="sidebar__additional-info js-show">
+                            <div class="separation"></div>
+                            <ul class="details-info">
+                                <li class="details-info__item">
+                                    <span class="box box--s2 icon-box"><i class="font-icon icon-envelope"></i></span>
+                                    <div class="contacts-block__info">
+                                        <span class="overhead">البريد الالكتروني</span>
+                                        <a class="text-overflow" href="mailto:besherallhagomar87@gmail.com"
+                                            title="besherallhagomar87@gmail.com"
+                                            style="font-size:13px;">b.hagomar87@gmail.com</a>
+                                    </div>
+                                </li>
+                                <li class="details-info__item">
+                                    <span class="box box--s2 icon-box"><i class="font-icon icon-phone"></i></span>
+                                    <div class="contacts-block__info">
+                                        <span class="overhead">واتس اب للاعمال والتعاون</span>
+                                        <a href=""><span class="text-overflow"
+                                                title="+201026724579">963991318649+</span></a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="separation d-xl-none"></div>
+                            <div class="social">
+                                <a class="social__link" href=""><i class="feathericon-linkedin"></i></a>
+                                <a class="social__link" href=""><i class="feathericon-facebook"></i></a>
+                                <a class="social__link" href=""><i class="feathericon-youtube"></i></a>
+                                <a class="social__link" href=""><i class="feathericon-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Content -->
+                <div class="col-12 col-md-12 col-xl-9">
+                    <div class="box-outer">
+
+                        <!-- Menu -->
+                        <div class="nav-container">
+                            <ul class="nav">
+                                <li class="nav__item"><a href="index.html">الرئيسية</a></li>
+                                <li class="nav__item"><a href="resume.html" class="active">السيرة الذاتية</a></li>
+                                <li class="nav__item"><a href="about.html">معرض الاعمال</a></li>
+                                <li class="nav__item"><a href="about.html">المهارات</a></li>
+                                <li class="nav__item"><a href="about.html">الخدمات</a></li>
+                                <li class="nav__item"><a href="about.html">المدونة</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Resume Header -->
+                        <div class="pb-0 pb-sm-2">
+                            <h1 class="title title--h1 title__separate">السيرة الذاتية</h1>
+                        </div>
+
+                        <!-- Download Button -->
+                        <div style="text-align: center; margin: 1.75rem 0 2rem;">
+                            <a href="besher-resume.pdf"
+                               download="Besher-AlHajOmar-Resume.pdf"
+                               aria-label="Download Besher Al Haj Omar's full CV as a PDF file"
+                               class="resume-download-btn">
+                                <i class="fas fa-download" aria-hidden="true"></i>
+                                Download Full CV (PDF)
+                            </a>
+                        </div>
+
+                        <div class="resume-grid">
+
+                            <!-- Professional Summary -->
+                            <div class="resume-card">
+                                <h3 class="resume-card__heading">
+                                    <i class="fas fa-user-tie" aria-hidden="true"></i>
+                                    Professional Summary
+                                </h3>
+                                <p>Results-driven Full-Stack Developer and aspiring Solutions Architect with a proven
+                                    track record of building highly optimized, responsive web applications. Deeply
+                                    passionate about Cloud Infrastructure and AI for Security, specializing in clean code
+                                    and maximum performance (achieving up to 99% Lighthouse performance scores). Adept at
+                                    aligning technical execution with strategic vision, currently expanding expertise in
+                                    enterprise cloud administration and advanced cybersecurity frameworks.</p>
+                            </div>
+
+                            <!-- Experience -->
+                            <div class="resume-card">
+                                <h3 class="resume-card__heading">
+                                    <i class="fas fa-briefcase" aria-hidden="true"></i>
+                                    Experience
+                                </h3>
+                                <p class="resume-job-title">Independent Web Developer &amp; Solutions Architect</p>
+                                <p class="resume-job-company">Self-Employed &nbsp;·&nbsp; Remote</p>
+                                <span class="resume-job-period">June 2026 – Present</span>
+                                <ul class="resume-bullets">
+                                    <li>Architected and deployed a high-performance personal portfolio and blogging platform hosted on Vercel.</li>
+                                    <li>Optimized frontend architecture to achieve a 99% Performance Score on Google Lighthouse with zero Total Blocking Time (TBT).</li>
+                                    <li>Implemented modern UI/UX practices ensuring full responsiveness and cross-device compatibility.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Education -->
+                            <div class="resume-card">
+                                <h3 class="resume-card__heading">
+                                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                                    Education
+                                </h3>
+                                <p class="resume-edu-degree">Bachelor's Degree in Information Engineering</p>
+                                <p class="resume-edu-institution">University of Aleppo &nbsp;·&nbsp; Aleppo, Syria</p>
+                                <span class="resume-job-period">In Progress</span>
+                            </div>
+
+                            <!-- Technical Skills -->
